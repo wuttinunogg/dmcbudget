@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1b4f72">
+<title>แผนกลยุทธ์ ฝ่ายสื่อสารการตลาด UTCC 2569</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Noto+Serif+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:#0e1117;--ink2:#2d3545;--ink3:#5a6375;
+  --paper:#f5f3ee;--paper2:#ece9e2;--card:#ffffff;
+  --accent:#1b4f72;--accent2:#2e86c1;
+  --gold:#b7860b;--gold2:#e0a800;--gold-pale:#fef9e7;
+  --teal:#0e6655;--teal-pale:#e8f8f5;
+  --red:#922b21;--red-pale:#fdedec;
+  --amber:#9a5c0a;--amber-pale:#fef5e7;
+  --green:#1a7a4a;--green-pale:#e8f8f0;
+  --rule:#d5d0c7;
+  --bnav:60px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  font-family:'IBM Plex Sans Thai',sans-serif;
+  background:var(--paper);color:var(--ink);
+  min-height:100vh;line-height:1.65;
+  padding-bottom:calc(var(--bnav) + env(safe-area-inset-bottom));
+}
+
+/* MASTHEAD */
+.masthead{background:var(--accent);position:relative;overflow:hidden;}
+.masthead::after{content:'';position:absolute;right:-40px;top:-40px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,0.05);pointer-events:none;}
+.masthead-inner{position:relative;z-index:1;padding:18px 16px 14px;display:flex;align-items:flex-start;gap:12px;}
+.masthead-mark{background:var(--gold2);color:var(--accent);font-family:'Noto Serif Thai',serif;font-weight:700;font-size:14px;width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.masthead-body{flex:1;min-width:0;}
+.masthead-body h1{font-family:'Noto Serif Thai',serif;font-size:16px;font-weight:700;line-height:1.3;color:#fff;}
+.masthead-body p{font-size:11.5px;color:rgba(255,255,255,0.65);margin-top:2px;}
+.masthead-pill{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.95);padding:4px 10px;border-radius:20px;font-size:11px;font-weight:600;white-space:nowrap;flex-shrink:0;align-self:flex-start;}
+
+/* DESKTOP TOP NAV */
+.top-nav{background:var(--ink);display:flex;overflow-x:auto;scrollbar-width:none;position:sticky;top:0;z-index:100;border-bottom:3px solid var(--gold2);}
+.top-nav::-webkit-scrollbar{display:none;}
+.tnb{padding:11px 16px;color:rgba(255,255,255,0.5);font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap;background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-3px;transition:all .2s;font-family:'IBM Plex Sans Thai',sans-serif;display:flex;align-items:center;gap:5px;}
+.tnb:hover{color:rgba(255,255,255,0.85);}
+.tnb.on{color:var(--gold2);border-bottom-color:var(--gold2);background:rgba(224,168,0,0.07);}
+
+/* MOBILE BOTTOM NAV */
+.bot-nav{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--ink);border-top:2px solid var(--gold2);height:var(--bnav);padding-bottom:env(safe-area-inset-bottom);overflow-x:auto;scrollbar-width:none;}
+.bot-nav::-webkit-scrollbar{display:none;}
+.bot-nav-inner{display:flex;height:100%;min-width:max-content;width:100%;}
+.bnb{flex:1;min-width:68px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;color:rgba(255,255,255,0.4);font-size:9.5px;font-weight:700;cursor:pointer;background:none;border:none;font-family:'IBM Plex Sans Thai',sans-serif;transition:all .15s;padding:0 4px;border-top:3px solid transparent;margin-top:-2px;}
+.bnb .ei{font-size:19px;line-height:1;}
+.bnb.on{color:var(--gold2);border-top-color:var(--gold2);}
+
+/* LAYOUT */
+.wrap{max-width:1240px;margin:0 auto;padding:18px 14px;}
+.page{display:none;animation:fi .2s ease;}
+.page.on{display:block;}
+@keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+
+/* KPI */
+.kpi-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px;}
+.kpi{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:13px 14px;position:relative;overflow:hidden;}
+.kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--stripe,var(--gold2));}
+.kpi-lbl{font-size:9.5px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px;}
+.kpi-val{font-family:'Noto Serif Thai',serif;font-size:20px;font-weight:700;color:var(--ink);line-height:1;}
+.kpi-sub{font-size:10.5px;color:var(--ink3);margin-top:3px;}
+
+/* SECTION */
+.sh{font-family:'Noto Serif Thai',serif;font-size:15px;font-weight:700;color:var(--accent);padding-bottom:7px;border-bottom:2px solid var(--gold2);margin-bottom:13px;display:flex;align-items:center;gap:6px;}
+.sec{margin-bottom:22px;}
+
+/* TABLE */
+.tbl-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--rule);}
+table{width:100%;border-collapse:collapse;background:var(--card);}
+thead tr{background:var(--accent);}
+thead th{color:rgba(255,255,255,0.9);font-size:11.5px;font-weight:600;padding:9px 11px;text-align:left;white-space:nowrap;}
+tbody tr{border-bottom:1px solid var(--rule);}
+tbody tr:last-child{border-bottom:none;}
+tbody tr:hover{background:#f9f8f4;}
+td{padding:9px 11px;font-size:13px;vertical-align:top;}
+.r{text-align:right;font-family:'Noto Serif Thai',serif;font-weight:600;}
+.tr{background:var(--gold-pale)!important;font-weight:700;}
+.tr td{color:var(--accent);}
+
+/* MOBILE CARDS */
+.card-list{display:none;flex-direction:column;gap:9px;}
+.ci{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:13px;border-left:4px solid var(--accent);}
+.ci.gold{border-left-color:var(--gold2);}
+.ci.red{border-left-color:var(--red);}
+.ci-title{font-weight:700;font-size:13.5px;color:var(--ink);margin-bottom:5px;}
+.ci-meta{font-size:11.5px;color:var(--ink3);margin-bottom:3px;display:flex;gap:4px;flex-wrap:wrap;align-items:center;}
+.ci-amount{font-family:'Noto Serif Thai',serif;font-size:17px;font-weight:700;color:var(--accent);margin-top:7px;}
+.ci-desc{font-size:12px;color:var(--ink2);margin-top:5px;line-height:1.5;}
+
+/* BADGES */
+.b{display:inline-block;padding:2px 7px;border-radius:20px;font-size:10.5px;font-weight:700;margin:1px;}
+.b-blue{background:#e8f0fe;color:#1a56db;}
+.b-gold{background:var(--gold-pale);color:var(--gold);border:1px solid #fde68a;}
+.b-green{background:var(--green-pale);color:var(--teal);}
+.b-red{background:var(--red-pale);color:var(--red);}
+.b-gray{background:var(--paper2);color:var(--ink3);}
+.b-teal{background:var(--teal-pale);color:var(--teal);}
+.b-amber{background:var(--amber-pale);color:var(--amber);}
+
+/* BOX */
+.box{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:13px 15px;margin-bottom:11px;}
+.box h3{font-family:'Noto Serif Thai',serif;font-size:13.5px;font-weight:700;color:var(--accent);margin-bottom:9px;display:flex;align-items:center;gap:5px;}
+.box ul{list-style:none;}
+.box ul li{padding:6px 0;border-bottom:1px solid var(--rule);font-size:12.5px;color:var(--ink2);display:flex;align-items:flex-start;gap:7px;line-height:1.55;}
+.box ul li:last-child{border-bottom:none;}
+.ico{font-size:14px;flex-shrink:0;margin-top:1px;}
+
+/* STRATEGY */
+.sc{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:13px 15px;margin-bottom:9px;}
+.sc-head{display:flex;gap:11px;margin-bottom:9px;}
+.sc-num{width:34px;height:34px;background:var(--accent);color:var(--gold2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif Thai',serif;font-size:15px;font-weight:700;flex-shrink:0;}
+.sc-title{font-weight:700;font-size:13.5px;color:var(--ink);line-height:1.4;}
+.sc-kpi{font-size:11px;color:var(--ink3);margin-top:2px;}
+.sc-body{font-size:12.5px;color:var(--ink2);margin-top:7px;border-top:1px solid var(--rule);padding-top:7px;}
+.cov{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:5px;font-size:10.5px;font-weight:700;margin-bottom:6px;}
+.cov-ok{background:var(--green-pale);color:var(--green);border:1px solid #86efac;}
+.cov-half{background:var(--amber-pale);color:var(--amber);border:1px solid #fde68a;}
+.cov-no{background:var(--red-pale);color:var(--red);border:1px solid #fca5a5;}
+
+/* CHART */
+.chart{display:flex;flex-direction:column;gap:8px;}
+.cr{display:flex;flex-direction:column;gap:3px;}
+.cr-lbl{display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink2);flex-wrap:wrap;gap:2px;}
+.cr-lbl span:last-child{font-family:'Noto Serif Thai',serif;font-weight:600;white-space:nowrap;}
+.cr-track{background:var(--paper2);border-radius:5px;height:16px;overflow:hidden;}
+.cr-fill{height:100%;border-radius:5px;min-width:22px;display:flex;align-items:center;padding-left:5px;font-size:10px;font-weight:700;color:#fff;white-space:nowrap;transition:width 1.2s cubic-bezier(.25,.46,.45,.94);}
+
+/* SWOT */
+.swot{display:flex;flex-direction:column;gap:9px;}
+.swot-q{border-radius:10px;padding:13px;border:1px solid var(--rule);}
+.swot-q h4{font-family:'Noto Serif Thai',serif;font-size:13.5px;font-weight:700;margin-bottom:7px;}
+.swot-q ul{list-style:none;}
+.swot-q ul li{font-size:12px;color:var(--ink2);padding:3px 0;border-bottom:1px solid rgba(0,0,0,0.06);display:flex;gap:5px;}
+.swot-q ul li:last-child{border-bottom:none;}
+.sq-s{background:#e8f8f0;}.sq-s h4{color:var(--teal);}
+.sq-w{background:var(--red-pale);}.sq-w h4{color:var(--red);}
+.sq-o{background:#e8f0fe;}.sq-o h4{color:#1a56db;}
+.sq-t{background:var(--amber-pale);}.sq-t h4{color:var(--amber);}
+
+/* TIMELINE DESKTOP */
+.tl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.tl-grid{min-width:800px;display:grid;grid-template-columns:200px repeat(12,1fr);border:1px solid var(--rule);border-radius:10px;overflow:hidden;background:var(--card);font-size:11.5px;}
+.tl-head{background:var(--accent);color:rgba(255,255,255,0.85);font-weight:600;padding:7px 5px;font-size:10.5px;text-align:center;border-right:1px solid rgba(255,255,255,0.12);}
+.tl-head:first-child{text-align:left;padding-left:9px;}
+.tl-row-lbl{padding:7px 9px;border-bottom:1px solid var(--rule);color:var(--ink2);font-weight:500;font-size:11.5px;display:flex;align-items:center;background:#fafaf8;}
+.tl-cell{border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:3px;display:flex;align-items:center;justify-content:center;}
+.tl-cell:last-child{border-right:none;}
+.tl-dot{width:100%;height:16px;border-radius:3px;background:var(--accent2);opacity:.85;}
+.tl-dot.g{background:var(--teal);}
+.tl-dot.o{background:#c0392b;}
+
+/* TIMELINE MOBILE */
+.tl-mob{display:none;flex-direction:column;gap:8px;}
+.tl-mi{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:11px 13px;display:flex;align-items:flex-start;gap:9px;}
+.tl-md{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:4px;}
+.tl-mn{font-weight:600;font-size:13px;color:var(--ink);}
+.tl-mm{font-size:11px;color:var(--ink3);margin-top:2px;}
+
+/* CALC */
+.calc-card{background:var(--card);border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-bottom:12px;}
+.calc-hd{background:var(--accent);color:#fff;padding:11px 15px;font-family:'Noto Serif Thai',serif;font-size:14px;font-weight:700;}
+.calc-row{display:flex;align-items:center;justify-content:space-between;padding:10px 15px;border-bottom:1px solid var(--rule);gap:8px;}
+.calc-row:last-of-type{border-bottom:none;}
+.calc-lbl{color:var(--ink2);font-size:13px;flex:1;min-width:0;}
+.calc-dept{color:var(--ink3);font-size:11px;display:block;margin-top:1px;}
+.calc-inp{width:120px;flex-shrink:0;padding:7px 10px;border:1px solid var(--rule);border-radius:8px;text-align:right;font-family:'Noto Serif Thai',serif;font-size:14px;background:var(--paper);color:var(--ink);-webkit-appearance:none;transition:border-color .2s;}
+.calc-inp:focus{outline:none;border-color:var(--accent2);background:#fff;}
+.calc-inp.new{border-color:var(--amber);background:var(--amber-pale);}
+.calc-foot{background:var(--accent);padding:12px 15px;display:flex;align-items:center;justify-content:space-between;}
+.calc-foot .lbl{color:rgba(255,255,255,0.8);font-size:13px;}
+.calc-foot .val{font-family:'Noto Serif Thai',serif;font-size:20px;font-weight:700;color:var(--gold2);}
+.grand-box{background:var(--accent);border-radius:12px;padding:22px 16px;text-align:center;margin-bottom:12px;}
+.grand-num{font-family:'Noto Serif Thai',serif;font-size:34px;font-weight:700;color:var(--gold2);}
+.grand-lbl{font-size:12.5px;color:rgba(255,255,255,0.7);margin-top:3px;}
+.diff-tag{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11.5px;font-weight:700;margin-top:9px;border:1px solid currentColor;}
+
+/* GRID */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+
+/* RESPONSIVE */
+@media (max-width:640px){
+  .top-nav{display:none;}
+  .bot-nav{display:flex;}
+  .g2{grid-template-columns:1fr;}
+  .tbl-wrap{display:none;}
+  .card-list{display:flex;}
+  .tl-wrap{display:none;}
+  .tl-mob{display:flex;}
+  .swot{flex-direction:column;}
+  .wrap{padding:14px 12px;}
+  .calc-row{flex-wrap:wrap;}
+  .calc-inp{width:100%;}
+}
+@media (min-width:641px){
+  .tl-mob{display:none;}
+  .swot{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+}
+footer{background:var(--ink);color:rgba(255,255,255,0.35);text-align:center;padding:13px;font-size:11px;}
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-inner">
+    <div class="masthead-mark">ฝสต.</div>
+    <div class="masthead-body">
+      <h1>แผนกลยุทธ์ ฝ่ายสื่อสารการตลาด UTCC</h1>
+      <p>วิเคราะห์ความครอบคลุม ช่องว่าง และงบประมาณโครงการ</p>
+    </div>
+    <span class="masthead-pill">2569</span>
+  </div>
+</div>
+
+<!-- DESKTOP TOP NAV -->
+<nav class="top-nav">
+  <button class="tnb on" onclick="show('overview',this,'top')">📊 ภาพรวม</button>
+  <button class="tnb" onclick="show('swot',this,'top')">🔍 SWOT</button>
+  <button class="tnb" onclick="show('projects',this,'top')">📋 โครงการ & งบ</button>
+  <button class="tnb" onclick="show('strategy',this,'top')">🎯 วิเคราะห์กลยุทธ์</button>
+  <button class="tnb" onclick="show('gap',this,'top')">⚠️ ช่องว่าง</button>
+  <button class="tnb" onclick="show('timeline',this,'top')">📅 แผนปฏิบัติการ</button>
+  <button class="tnb" onclick="show('calc',this,'top')">🧮 คำนวณงบ</button>
+</nav>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav class="bot-nav">
+  <div class="bot-nav-inner">
+    <button class="bnb on" onclick="show('overview',this,'bot')"><span class="ei">📊</span>ภาพรวม</button>
+    <button class="bnb" onclick="show('swot',this,'bot')"><span class="ei">🔍</span>SWOT</button>
+    <button class="bnb" onclick="show('projects',this,'bot')"><span class="ei">📋</span>โครงการ</button>
+    <button class="bnb" onclick="show('strategy',this,'bot')"><span class="ei">🎯</span>กลยุทธ์</button>
+    <button class="bnb" onclick="show('gap',this,'bot')"><span class="ei">⚠️</span>ช่องว่าง</button>
+    <button class="bnb" onclick="show('timeline',this,'bot')"><span class="ei">📅</span>แผน</button>
+    <button class="bnb" onclick="show('calc',this,'bot')"><span class="ei">🧮</span>คำนวณ</button>
+  </div>
+</nav>
+
+<!-- ═══ OVERVIEW ═══ -->
+<div id="page-overview" class="page on wrap">
+  <div class="kpi-row">
+    <div class="kpi" style="--stripe:#1b4f72"><div class="kpi-lbl">งบโครงการรวม</div><div class="kpi-val" id="kpi-total">7,963,698</div><div class="kpi-sub">บาท · 12 โครงการ</div></div>
+    <div class="kpi" style="--stripe:#e0a800"><div class="kpi-lbl">กลยุทธ์ทั้งหมด</div><div class="kpi-val">7 ข้อ</div><div class="kpi-sub">ยุทธศาสตร์ มกค. 1.3 & 1.4</div></div>
+    <div class="kpi" style="--stripe:#1a7a4a"><div class="kpi-lbl">มีงบ/โครงการครบ</div><div class="kpi-val">5 / 7</div><div class="kpi-sub">กลยุทธ์ที่ครอบคลุม</div></div>
+    <div class="kpi" style="--stripe:#c0392b"><div class="kpi-lbl">ขาดงบ</div><div class="kpi-val">2 ข้อ</div><div class="kpi-sub">กย.6 MOU & กย.7 บุคลากร</div></div>
+  </div>
+  <div class="g2">
+    <div class="sec"><div class="sh">💰 สัดส่วนงบตามโครงการ</div><div class="box" style="padding:14px"><div class="chart" id="mainChart"></div></div></div>
+    <div class="sec"><div class="sh">🏢 งบแยกตามหน่วยงาน</div><div class="box" style="padding:14px"><div class="chart" id="deptChart"></div></div></div>
+  </div>
+  <div class="sec">
+    <div class="sh">📌 วิสัยทัศน์ & การเชื่อมโยง</div>
+    <div class="box"><h3>🏫 วิสัยทัศน์</h3><ul>
+      <li><span class="ico">🎯</span>ศูนย์กลางสื่อสารการตลาดส่งเสริมภาพลักษณ์และการรับนักศึกษา UTCC สู่สถาบันชั้นนำอาเซียน</li>
+      <li><span class="ico">✨</span><em>"สื่อสารสัมพันธ์ สร้างสรรค์ภาพลักษณ์ที่ทันสมัย สู่สถาบันชั้นนำด้านธุรกิจการค้าในอาเซียน"</em></li>
+    </ul></div>
+    <div class="box"><h3>🔗 ยุทธศาสตร์ มกค. ที่เชื่อมโยง</h3><ul>
+      <li><span class="ico">📌</span><strong>1.3</strong> สร้างความมั่นคงด้านรายได้ (ป.ตรี 5,500 / โท-เอก 500-550 คน)</li>
+      <li><span class="ico">📌</span><strong>1.3.1</strong> พัฒนาและสื่อสารภาพลักษณ์ UTCC ให้ตรงใจกลุ่มเป้าหมาย onsite/online</li>
+      <li><span class="ico">📌</span><strong>1.4</strong> Happy Model — กินดี อยู่ดี จิตใจดี ห้องเรียนดี กิจกรรมดี</li>
+      <li><span class="ico">📌</span><strong>1.4.7</strong> บริหารจัดการเชิงรุก ลดขั้นตอน ลดต้นทุน โดยนำเทคโนโลยีมาใช้</li>
+    </ul></div>
+    <div class="box"><h3>👥 หน่วยงานรับผิดชอบ</h3><ul>
+      <li><span class="ico">📢</span><strong>ปชส.</strong> กองประชาสัมพันธ์ — ~2,500,000 บาท</li>
+      <li><span class="ico">📣</span><strong>กกต.</strong> กองการตลาด — ~2,495,309 บาท</li>
+      <li><span class="ico">🏫</span><strong>กสร.</strong> กองส่งเสริมรับนักศึกษา — ~2,168,700 บาท</li>
+      <li><span class="ico">🤝</span><strong>ร่วม ปชส.+กกต.</strong> — ~950,000 บาท</li>
+    </ul></div>
+  </div>
+</div>
+
+<!-- ═══ SWOT ═══ -->
+<div id="page-swot" class="page wrap">
+  <div class="sec">
+    <div class="sh">🔍 SWOT Analysis · ฝ่ายสื่อสารการตลาด 2569</div>
+    <div class="swot">
+      <div class="swot-q sq-s"><h4>💪 จุดแข็ง (Strengths)</h4><ul>
+        <li><span>S1</span>ประชาสัมพันธ์หลากหลายรูปแบบ ทั้งโฆษณาและกิจกรรม</li>
+        <li><span>S2</span>ทุนการศึกษากระตุ้นความสนใจผู้สมัคร</li>
+        <li><span>S3</span>นักศึกษาทุนพิเศษ + ทุนสื่อมวลชน ป.โท ช่วยประชาสัมพันธ์</li>
+        <li><span>S4</span>นำเทคโนโลยีใหม่มาเพิ่มประสิทธิภาพงานสื่อสาร</li>
+        <li><span>S5</span>ระบบการสอนทันสมัย Smart Classroom / ออนไลน์ผสม</li>
+        <li><span>S6</span>ความร่วมมือ Alibaba, Stanford, MIT, BLCU</li>
+        <li><span>S7</span>เครือข่ายหอการค้าไทยและหอการค้าจังหวัดทั่วประเทศ</li>
+        <li><span>S8</span>ชื่อเสียงด้านองค์ความรู้ธุรกิจ</li>
+        <li><span>S9</span>ทำเลใจกลางเมือง เดินทางสะดวก ภูมิทัศน์สวย</li>
+        <li><span>S10</span>ห้องปฏิบัติการทันสมัย นำใช้จริงได้ครบวงจร</li>
+      </ul></div>
+      <div class="swot-q sq-w"><h4>⚠️ จุดอ่อน (Weaknesses)</h4><ul>
+        <li><span>W1</span>ความสามารถแข่งขันยังสามารถพัฒนาได้อีก</li>
+        <li><span>W2</span>PR ผ่านเครือข่ายหอการค้าจังหวัดยังน้อย</li>
+        <li><span>W3</span>บุคลากรขาดเครื่องมือเทคโนโลยีที่จำเป็น</li>
+      </ul></div>
+      <div class="swot-q sq-o"><h4>🚀 โอกาส (Opportunities)</h4><ul>
+        <li><span>O1</span>รัฐส่งเสริมอุตสาหกรรม ท่องเที่ยว บริการ</li>
+        <li><span>O2</span>นโยบาย Lifelong Learning — คนทำงานต้อง Upskill</li>
+        <li><span>O3</span>คนรุ่นใหม่สนใจการเป็นผู้ประกอบการมากขึ้น</li>
+        <li><span>O4</span>เทคโนโลยีสื่อสารและ CRM ใหม่ๆ เกิดขึ้น</li>
+        <li><span>O5</span>AI เอื้อต่อการบริหารงานและการสอน</li>
+      </ul></div>
+      <div class="swot-q sq-t"><h4>🛡️ ภัยคุกคาม (Threats)</h4><ul>
+        <li><span>T1</span>TCAS + ประชากรลดลง → นักศึกษาน้อยลง</li>
+        <li><span>T2</span>คลังหน่วยกิตทำให้นักศึกษาข้ามสถาบัน</li>
+        <li><span>T3</span>คู่แข่งปรับภาพลักษณ์เน้นธุรกิจมากขึ้น</li>
+      </ul></div>
+    </div>
+    <div class="box" style="margin-top:12px"><h3>💡 SWOT → กลยุทธ์</h3><ul>
+      <li><span class="ico">🟢</span>S4+O4,O5 → กย.3 (Mar-Tech) + กย.7 (พัฒนาบุคลากร)</li>
+      <li><span class="ico">🟢</span>S7+O2 → กย.4 (เครือข่ายจังหวัด) + กย.5 (Lifelong Learning)</li>
+      <li><span class="ico">🟡</span>แก้ W2 ด้วย O1,O2 → กย.4 ยังได้งบน้อยเกินไป</li>
+      <li><span class="ico">🟡</span>แก้ W3 ด้วย O5 → กย.7 <span class="b b-red">ไม่มีงบ!</span></li>
+      <li><span class="ico">🔴</span>W1+T3 → ต้องการ Paid Media / KOL (ยังขาด)</li>
+    </ul></div>
+  </div>
+</div>
+
+<!-- ═══ PROJECTS ═══ -->
+<div id="page-projects" class="page wrap">
+  <div class="sec">
+    <div class="sh">📋 โครงการ / กิจกรรม & งบประมาณ</div>
+    <!-- Desktop table -->
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>#</th><th>โครงการ</th><th>กลยุทธ์</th><th>หน่วยงาน</th><th>KPI</th><th>งบ (บาท)</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><strong>สื่อมวลชนสัมพันธ์</strong></td><td><span class="b b-blue">กย.1</span></td><td>ปชส.</td><td>≥12 ประเด็น/ปี · พื้นที่สื่อ ≥30 ล้าน</td><td class="r">600,000</td></tr>
+        <tr><td>2</td><td><strong>จัดทำเอกสารและของที่ระลึก</strong></td><td><span class="b b-blue">กย.2</span></td><td>ปชส.</td><td>เพียงพอการใช้งานแนะแนว</td><td class="r">1,720,000</td></tr>
+        <tr><td>3</td><td><strong>ผลิตคอนเทนต์ภาพลักษณ์</strong></td><td><span class="b b-teal">กย.3</span></td><td>ปชส., กกต.</td><td>≥3 ชิ้น/สัปดาห์ · ≥1 online/เดือน</td><td class="r">150,000</td></tr>
+        <tr><td>4</td><td><strong>คอนเทนต์คณะวิชา (กลุ่มใหม่)</strong></td><td><span class="b b-teal">กย.3</span> <span class="b b-gold">กย.5</span></td><td>ปชส., กกต.</td><td>≥2 ชิ้น/คณะวิชา</td><td class="r">800,000</td></tr>
+        <tr><td>5</td><td><strong>กิจกรรมพิเศษการตลาด ช่วง 1</strong> <small>(ส.ค.–ม.ค. 11 กิจกรรม)</small></td><td><span class="b b-teal">กย.3</span></td><td>กกต.</td><td>≥15 ครั้ง · ≥7,500 ฐาน · 1%</td><td class="r">668,406</td></tr>
+        <tr><td>6</td><td><strong>กิจกรรมพิเศษการตลาด ช่วง 2</strong> <small>(ก.พ.–ก.ค. 8 กิจกรรม)</small></td><td><span class="b b-teal">กย.3</span></td><td>กกต.</td><td>≥15 ครั้ง · ≥7,500 ฐาน · 1%</td><td class="r">673,228</td></tr>
+        <tr><td>7</td><td><strong>เปิดบ้านเด็กหัวการค้า</strong></td><td><span class="b b-blue">กย.1</span> <span class="b b-gold">กย.2</span></td><td>กกต.</td><td>≥4,000 ฐาน · 1%</td><td class="r">562,386</td></tr>
+        <tr><td>8</td><td><strong>แคมป์เด็กหัวการค้า ปีที่ 12 (กทม.)</strong></td><td><span class="b b-blue">กย.1</span></td><td>กกต.</td><td>≥150 ฐาน · 1%</td><td class="r">348,689</td></tr>
+        <tr><td>9</td><td><strong>UTCC Cover Dance</strong></td><td><span class="b b-blue">กย.1</span></td><td>กกต.</td><td>≥500 คน · 1%</td><td class="r">242,289</td></tr>
+        <tr><td>10</td><td><strong>แนะแนวออกบูธต่างจังหวัด</strong></td><td><span class="b b-gold">กย.2</span> <span class="b b-amber">กย.4,5</span></td><td>กสร.</td><td>≥70 แห่ง · ≥10,000 ฐาน · 5%</td><td class="r">1,036,700</td></tr>
+        <tr><td>11</td><td><strong>แนะแนวออกบูธ กทม. & ปริมณฑล</strong></td><td><span class="b b-gold">กย.2</span> <span class="b b-amber">กย.4,6</span></td><td>กสร.</td><td>≥70 แห่ง · ≥10,000 ฐาน · 5%</td><td class="r">1,132,000</td></tr>
+        <tr><td>12</td><td><strong>ผลิตสื่อหอการค้าจังหวัด</strong></td><td><span class="b b-amber">กย.4</span></td><td>ปชส.</td><td>≥เดือนละ 1 ครั้ง</td><td class="r">30,000</td></tr>
+        <tr><td>13</td><td><strong>อบรมพัฒนาบุคลากร</strong></td><td><span class="b b-gray">กย.7</span></td><td>ทุกกอง</td><td>≥80% พึงพอใจ · ≥2 ครั้ง/ปี</td><td class="r" style="color:var(--red)">ไม่มีงบ</td></tr>
+        <tr class="tr"><td colspan="5"><strong>รวมทั้งสิ้น</strong></td><td class="r"><strong id="proj-total">7,963,698</strong></td></tr>
+      </tbody>
+    </table></div>
+    <!-- Mobile cards -->
+    <div class="card-list">
+      <div class="ci"><div class="ci-title">1. สื่อมวลชนสัมพันธ์</div><div class="ci-meta"><span class="b b-blue">กย.1</span><span class="b b-gray">ปชส.</span></div><div class="ci-desc">≥12 ประเด็น/ปี · พื้นที่สื่อ ≥30 ล้าน</div><div class="ci-amount">600,000 บาท</div></div>
+      <div class="ci"><div class="ci-title">2. จัดทำเอกสารและของที่ระลึก</div><div class="ci-meta"><span class="b b-blue">กย.2</span><span class="b b-gray">ปชส.</span></div><div class="ci-desc">เพื่อการประชาสัมพันธ์รูปแบบใหม่</div><div class="ci-amount">1,720,000 บาท</div></div>
+      <div class="ci"><div class="ci-title">3. ผลิตคอนเทนต์ภาพลักษณ์</div><div class="ci-meta"><span class="b b-teal">กย.3</span><span class="b b-gray">ปชส., กกต.</span></div><div class="ci-desc">≥3 ชิ้น/สัปดาห์ · ≥1 online/เดือน</div><div class="ci-amount">150,000 บาท</div></div>
+      <div class="ci"><div class="ci-title">4. คอนเทนต์คณะวิชา (กลุ่มใหม่)</div><div class="ci-meta"><span class="b b-teal">กย.3</span><span class="b b-gold">กย.5</span><span class="b b-gray">ปชส., กกต.</span></div><div class="ci-desc">≥2 ชิ้น/คณะวิชา สนับสนุนการรับสมัคร</div><div class="ci-amount">800,000 บาท</div></div>
+      <div class="ci"><div class="ci-title">5. กิจกรรมพิเศษการตลาด ช่วง 1</div><div class="ci-meta"><span class="b b-teal">กย.3</span><span class="b b-gray">กกต.</span></div><div class="ci-desc">ส.ค.–ม.ค. · 11 กิจกรรม: ตลาดนัดหลักสูตร, TCAS, Content Mktg</div><div class="ci-amount">668,406 บาท</div></div>
+      <div class="ci"><div class="ci-title">6. กิจกรรมพิเศษการตลาด ช่วง 2</div><div class="ci-meta"><span class="b b-teal">กย.3</span><span class="b b-gray">กกต.</span></div><div class="ci-desc">ก.พ.–ก.ค. · 8 กิจกรรม: Pride Month, Mini Open House, TCAS Fair</div><div class="ci-amount">673,228 บาท</div></div>
+      <div class="ci"><div class="ci-title">7. เปิดบ้านเด็กหัวการค้า</div><div class="ci-meta"><span class="b b-blue">กย.1</span><span class="b b-gold">กย.2</span><span class="b b-gray">กกต.</span></div><div class="ci-desc">≥4,000 ฐานข้อมูล · 1% conversion</div><div class="ci-amount">562,386 บาท</div></div>
+      <div class="ci"><div class="ci-title">8. แคมป์เด็กหัวการค้า ปีที่ 12 (กทม.)</div><div class="ci-meta"><span class="b b-blue">กย.1</span><span class="b b-gray">กกต.</span></div><div class="ci-desc">≥150 ฐาน · 1% conversion</div><div class="ci-amount">348,689 บาท</div></div>
+      <div class="ci"><div class="ci-title">9. UTCC Cover Dance</div><div class="ci-meta"><span class="b b-blue">กย.1</span><span class="b b-gray">กกต.</span></div><div class="ci-desc">≥500 คนเข้าร่วม · 1% conversion</div><div class="ci-amount">242,289 บาท</div></div>
+      <div class="ci"><div class="ci-title">10. แนะแนวออกบูธต่างจังหวัด</div><div class="ci-meta"><span class="b b-gold">กย.2</span><span class="b b-amber">กย.4,5</span><span class="b b-gray">กสร.</span></div><div class="ci-desc">≥70 สถาบัน · ≥10,000 ฐาน · 5%</div><div class="ci-amount">1,036,700 บาท</div></div>
+      <div class="ci"><div class="ci-title">11. แนะแนวออกบูธ กทม. & ปริมณฑล</div><div class="ci-meta"><span class="b b-gold">กย.2</span><span class="b b-amber">กย.4,6</span><span class="b b-gray">กสร.</span></div><div class="ci-desc">≥70 สถาบัน · ≥10,000 ฐาน · 5%</div><div class="ci-amount">1,132,000 บาท</div></div>
+      <div class="ci"><div class="ci-title">12. ผลิตสื่อหอการค้าจังหวัด</div><div class="ci-meta"><span class="b b-amber">กย.4</span><span class="b b-gray">ปชส.</span></div><div class="ci-desc">สื่อสนับสนุนศูนย์รับสมัคร ≥เดือนละ 1 ครั้ง</div><div class="ci-amount">30,000 บาท</div></div>
+      <div class="ci red"><div class="ci-title">13. อบรมพัฒนาบุคลากร</div><div class="ci-meta"><span class="b b-gray">กย.7</span><span class="b b-gray">ทุกกอง</span></div><div class="ci-desc">KPI: ≥80% พึงพอใจ · ≥2 ครั้ง/ปี · 90% เข้าร่วม</div><div class="ci-amount" style="color:var(--red)">❌ ไม่มีงบ</div></div>
+      <div class="ci gold"><div class="ci-title">รวมงบประมาณทั้งสิ้น</div><div class="ci-amount" id="proj-total-m" style="font-size:22px">7,963,698 บาท</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ STRATEGY ═══ -->
+<div id="page-strategy" class="page wrap">
+  <div class="sec">
+    <div class="sh">🎯 วิเคราะห์ความครอบคลุมกลยุทธ์ 7 ข้อ</div>
+    <div class="sc"><div class="sc-head"><div class="sc-num">1</div><div><div class="cov cov-ok">✅ ครอบคลุมดีมาก</div><div class="sc-title">ตอกย้ำภาพลักษณ์ · AI · Practice · Happy University</div><div class="sc-kpi">≥12 ประเด็น/ปี · พื้นที่สื่อ ≥30 ล้าน</div></div></div><div><span class="b b-blue">สื่อมวลชนสัมพันธ์ 600k</span><span class="b b-blue">เปิดบ้าน 562k</span><span class="b b-blue">แคมป์ 349k</span><span class="b b-blue">Cover Dance 242k</span></div><div class="sc-body">4 โครงการ งบรวม ~1.75 ล้าน · KPI วัดได้ทั้งปริมาณและมูลค่า</div></div>
+    <div class="sc"><div class="sc-head"><div class="sc-num">2</div><div><div class="cov cov-ok">✅ ครอบคลุมดี</div><div class="sc-title">การตลาดและ PR เชิงรุก — หลักสูตร ทุน ข้อมูล</div><div class="sc-kpi">≥70 สถาบัน · ≥10,000 ฐาน · 5%</div></div></div><div><span class="b b-gold">เอกสาร/ของที่ระลึก 1.72M</span><span class="b b-gold">แนะแนวต่างจว. 1.04M</span><span class="b b-gold">แนะแนว กทม. 1.13M</span></div><div class="sc-body">งบรวม 4.4 ล้าน สูงสุด มีทั้ง Outreach, Event และ Materials ครบ</div></div>
+    <div class="sc"><div class="sc-head"><div class="sc-num">3</div><div><div class="cov cov-ok">✅ ครอบคลุมดี (ขาด Paid Media)</div><div class="sc-title">Social Media · Mar-Tech</div><div class="sc-kpi">≥3 ชิ้น/สัปดาห์ · ≥1 online/เดือน</div></div></div><div><span class="b b-teal">คอนเทนต์ภาพลักษณ์ 150k</span><span class="b b-teal">คอนเทนต์คณะ 800k</span><span class="b b-teal">กิจกรรมพิเศษ 1&2 รวม 1.34M</span></div><div class="sc-body">งบรวม ~2.3 ล้าน แต่<strong>ไม่มีงบ Paid Ads</strong> (Meta/Google/TikTok) และไม่มีงบ Software subscription</div></div>
+    <div class="sc"><div class="sc-head"><div class="sc-num">4</div><div><div class="cov cov-half">⚠️ ครอบคลุมบางส่วน</div><div class="sc-title">รับสมัครผ่านเครือข่ายหอการค้าจังหวัด</div><div class="sc-kpi">มีคอนเทนต์ PR ≥เดือนละ 1 ครั้ง</div></div></div><div><span class="b b-gold">ผลิตสื่อหอการค้าจว. 30k</span><span class="b b-gray">แนะแนวต่างจว. (ใช้ร่วม)</span></div><div class="sc-body">งบเฉพาะมีแค่ 30,000 บาท ทั้งที่ W2 ระบุชัดว่าเป็นจุดอ่อนสำคัญ</div></div>
+    <div class="sc"><div class="sc-head"><div class="sc-num">5</div><div><div class="cov cov-half">⚠️ ครอบคลุมบางส่วน</div><div class="sc-title">ขยายตลาด → ปวช./ปวส. · Upskill/Reskill · หน่วยกิต</div><div class="sc-kpi">≥2 ชิ้น content/คณะวิชา</div></div></div><div><span class="b b-gold">คอนเทนต์คณะ (ใช้ร่วม) 800k</span><span class="b b-gray">ไม่มีโครงการ Reskill เฉพาะ</span></div><div class="sc-body">O2 Lifelong Learning เป็นโอกาสใหญ่แต่ยังไม่มีโครงการรองรับโดยตรง</div></div>
+    <div class="sc"><div class="sc-head"><div class="sc-num">6</div><div><div class="cov cov-half">⚠️ ครอบคลุมบางส่วน</div><div class="sc-title">สร้างสัมพันธ์อาจารย์แนะแนว · MOU โรงเรียน</div><div class="sc-kpi">MOU ≥10 แห่ง (กทม.) + ≥5 แห่ง (ต่างจว.)</div></div></div><div><span class="b b-gold">แนะแนวบูธ (ใช้ร่วม)</span><span class="b b-red">ไม่มีงบ MOU เฉพาะ</span></div><div class="sc-body">KPI ตั้งไว้ ≥15 แห่ง แต่งบเฉพาะ = 0 บาท ต้องเพิ่ม Teacher Engagement อย่างน้อย 100-200k</div></div>
+    <div class="sc"><div class="sc-head"><div class="sc-num">7</div><div><div class="cov cov-no">❌ มีโครงการแต่ไม่มีงบ!</div><div class="sc-title">พัฒนาทักษะบุคลากร · เทคโนโลยี · ทันสมัย</div><div class="sc-kpi">≥80% พึงพอใจ · ≥90% เข้าร่วม · ≥2 ครั้ง/ปี</div></div></div><div><span class="b b-red">โครงการอบรมอยู่ในแผน แต่งบประมาณ = 0 บาท</span></div><div class="sc-body">ขัดแย้งกับ "AI University" ใน กย.1 และ W3 (ขาดเทคโนโลยี) ใน SWOT อย่างชัดเจน</div></div>
+  </div>
+</div>
+
+<!-- ═══ GAP ═══ -->
+<div id="page-gap" class="page wrap">
+  <div class="sec">
+    <div class="sh">⚠️ ช่องว่างที่ต้องพิจารณาเพิ่ม</div>
+    <div class="box" style="border:2px solid var(--red)"><h3 style="color:var(--red)">🔴 ขาด — ต้องเพิ่มเร่งด่วน</h3><ul>
+      <li><span class="ico">❌</span><div><strong>งบพัฒนาบุคลากร (กย.7)</strong> — โครงการมีในแผนแต่งบ = 0 ขัดกับ KPI ≥2 ครั้ง/ปี และ "AI University" แนะนำเพิ่ม <span class="b b-red">80k–150k</span></div></li>
+      <li><span class="ico">❌</span><div><strong>งบ MOU / อาจารย์แนะแนว (กย.6)</strong> — KPI ≥15 แห่ง แต่ไม่มีงบเฉพาะ แนะนำเพิ่ม <span class="b b-red">100k–200k</span></div></li>
+      <li><span class="ico">❌</span><div><strong>Paid Digital Advertising (กย.3)</strong> — ไม่มีงบ Meta/Google/TikTok Ads เลย Gen Z ไม่เห็นสื่อ Organic แนะนำเพิ่ม <span class="b b-red">200k–500k</span></div></li>
+      <li><span class="ico">❌</span><div><strong>Software Subscription (กย.3, 7)</strong> — ไม่มีงบ Adobe CC, Canva Pro, AI tools แนะนำเพิ่ม <span class="b b-red">60k–120k</span></div></li>
+      <li><span class="ico">❌</span><div><strong>Campaign Reskill/Upskill (กย.5)</strong> — O2 ใหญ่มากแต่ไม่มีโครงการรองรับ</div></li>
+    </ul></div>
+    <div class="box" style="border:2px solid var(--amber)"><h3 style="color:var(--amber)">🟡 ควรทบทวน</h3><ul>
+      <li><span class="ico">⚠️</span><div><strong>KPI กย.3 ขาดมิติ Digital</strong> — ควรเพิ่ม Engagement Rate, Reach, Follower Growth</div></li>
+      <li><span class="ico">⚠️</span><div><strong>งบเอกสาร/ของที่ระลึก 1.72 ล้าน (21.6%)</strong> — ควรระบุรายละเอียดและพิจารณา Digital Materials บางส่วน</div></li>
+      <li><span class="ico">⚠️</span><div><strong>โครงการบูธซ้อนทับหลายกลยุทธ์</strong> — ทำให้ดูครอบคลุมแต่ยังขาดโครงการ unique สำหรับ กย.4, 5, 6</div></li>
+      <li><span class="ico">⚠️</span><div><strong>กย.4 ยังอ่อน</strong> — งบเฉพาะ 30k ไม่สมดุลกับ scale ปัญหา W2</div></li>
+    </ul></div>
+    <div class="box" style="border:2px solid var(--teal)"><h3 style="color:var(--teal)">🟢 จุดแข็งของแผน</h3><ul>
+      <li><span class="ico">✅</span>กย.1 & 2 ครอบคลุมยอดเยี่ยม Event+Outreach+Media ครบ</li>
+      <li><span class="ico">✅</span>KPI ส่วนใหญ่วัดได้ มีเป้าหมายชัดเจน ติดตามได้</li>
+      <li><span class="ico">✅</span>Timeline 12 เดือน ครอบคลุมตลอดปีการศึกษา</li>
+      <li><span class="ico">✅</span>Content Marketing 2 ช่วง กระจาย กทม.+ต่างจว.</li>
+      <li><span class="ico">✅</span>เชื่อมโยงยุทธศาสตร์ มกค. ชัดเจนทุกกลยุทธ์</li>
+    </ul></div>
+    <div class="sec">
+      <div class="sh">💡 รายการที่แนะนำให้เพิ่มเติม</div>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>รายการ</th><th>เหตุผล</th><th>กลยุทธ์</th><th>งบแนะนำ (บาท)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>อบรม AI & Digital Tools</strong></td><td>กย.7 งบ=0 + W3</td><td><span class="b b-gray">กย.7</span></td><td class="r">80k–150k</td></tr>
+          <tr><td><strong>Paid Digital Advertising</strong></td><td>กย.3 ไม่มี Media Buy</td><td><span class="b b-teal">กย.3</span></td><td class="r">200k–500k</td></tr>
+          <tr><td><strong>Software Subscription</strong></td><td>W3 ขาดเครื่องมือ</td><td><span class="b b-teal">กย.3</span></td><td class="r">60k–120k</td></tr>
+          <tr><td><strong>อาจารย์แนะแนว / MOU</strong></td><td>กย.6 งบ=0</td><td><span class="b b-amber">กย.6</span></td><td class="r">100k–200k</td></tr>
+          <tr><td><strong>Campaign Reskill/Upskill</strong></td><td>O2 ยังไม่มีโครงการ</td><td><span class="b b-gold">กย.5</span></td><td class="r">150k–300k</td></tr>
+          <tr><td><strong>Influencer / KOL Marketing</strong></td><td>กย.3 ไม่มีงบ KOL</td><td><span class="b b-teal">กย.3</span></td><td class="r">100k–200k</td></tr>
+          <tr class="tr"><td colspan="3"><strong>รวมที่ควรเพิ่ม (ประมาณการ)</strong></td><td class="r"><strong>690k–1.47M</strong></td></tr>
+        </tbody>
+      </table></div>
+      <div class="card-list">
+        <div class="ci red"><div class="ci-title">อบรม AI & Digital Tools</div><div class="ci-meta"><span class="b b-gray">กย.7</span></div><div class="ci-desc">กย.7 งบ = 0 + W3 ขาดเทคโนโลยี</div><div class="ci-amount" style="color:var(--amber)">80,000–150,000 บาท</div></div>
+        <div class="ci red"><div class="ci-title">Paid Digital Advertising</div><div class="ci-meta"><span class="b b-teal">กย.3</span><span class="b b-gold">กย.5</span></div><div class="ci-desc">ไม่มีงบ Meta/Google/TikTok Ads</div><div class="ci-amount" style="color:var(--amber)">200,000–500,000 บาท</div></div>
+        <div class="ci red"><div class="ci-title">Software Subscription</div><div class="ci-meta"><span class="b b-teal">กย.3</span></div><div class="ci-desc">Adobe CC, Canva Pro, AI tools</div><div class="ci-amount" style="color:var(--amber)">60,000–120,000 บาท</div></div>
+        <div class="ci red"><div class="ci-title">อาจารย์แนะแนวสัมพันธ์ / MOU</div><div class="ci-meta"><span class="b b-amber">กย.6</span></div><div class="ci-desc">KPI ≥15 MOU แต่งบ = 0</div><div class="ci-amount" style="color:var(--amber)">100,000–200,000 บาท</div></div>
+        <div class="ci red"><div class="ci-title">Campaign Reskill/Upskill</div><div class="ci-meta"><span class="b b-gold">กย.5</span></div><div class="ci-desc">O2 Lifelong Learning ยังไม่มีโครงการ</div><div class="ci-amount" style="color:var(--amber)">150,000–300,000 บาท</div></div>
+        <div class="ci red"><div class="ci-title">Influencer / KOL Marketing</div><div class="ci-meta"><span class="b b-teal">กย.3</span></div><div class="ci-desc">ไม่มีงบ KOL ชัดเจน</div><div class="ci-amount" style="color:var(--amber)">100,000–200,000 บาท</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ TIMELINE ═══ -->
+<div id="page-timeline" class="page wrap">
+  <div class="sec">
+    <div class="sh">📅 แผนปฏิบัติการ ปีการศึกษา 2569</div>
+    <div class="tl-wrap">
+      <div class="tl-grid">
+        <div class="tl-head">โครงการ</div>
+        <div class="tl-head">ส.ค.<br>69</div><div class="tl-head">ก.ย.</div><div class="tl-head">ต.ค.</div><div class="tl-head">พ.ย.</div><div class="tl-head">ธ.ค.</div>
+        <div class="tl-head">ม.ค.<br>70</div><div class="tl-head">ก.พ.</div><div class="tl-head">มี.ค.</div><div class="tl-head">เม.ย.</div><div class="tl-head">พ.ค.</div><div class="tl-head">มิ.ย.</div><div class="tl-head">ก.ค.</div>
+        <div class="tl-row-lbl">1. แนะแนว กทม. & ปริมณฑล</div>
+        <div class="tl-cell"><div class="tl-dot"></div></div><div class="tl-cell"><div class="tl-dot"></div></div><div class="tl-cell"><div class="tl-dot"></div></div><div class="tl-cell"><div class="tl-dot"></div></div><div class="tl-cell"></div>
+        <div class="tl-cell"></div><div class="tl-cell"><div class="tl-dot"></div></div><div class="tl-cell"><div class="tl-dot"></div></div><div class="tl-cell"><div class="tl-dot"></div></div><div class="tl-cell"><div class="tl-dot"></div></div><div class="tl-cell"><div class="tl-dot"></div></div><div class="tl-cell"><div class="tl-dot"></div></div>
+        <div class="tl-row-lbl">2. แนะแนวต่างจังหวัด</div>
+        <div class="tl-cell"><div class="tl-dot"></div></div><div class="tl-cell"><div class="tl-dot"></div></div><div class="tl-cell"><div class="tl-dot"></div></div><div class="tl-cell"><div class="tl-dot"></div></div><div class="tl-cell"><div class="tl-dot"></div></div>
+        <div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"><div class="tl-dot"></div></div>
+        <div class="tl-row-lbl">3. กิจกรรมพิเศษ ช่วง 1</div>
+        <div class="tl-cell"><div class="tl-dot g"></div></div><div class="tl-cell"></div><div class="tl-cell"><div class="tl-dot g"></div></div><div class="tl-cell"><div class="tl-dot g"></div></div><div class="tl-cell"><div class="tl-dot g"></div></div>
+        <div class="tl-cell"><div class="tl-dot g"></div></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div>
+        <div class="tl-row-lbl">4. กิจกรรมพิเศษ ช่วง 2</div>
+        <div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div>
+        <div class="tl-cell"></div><div class="tl-cell"><div class="tl-dot g"></div></div><div class="tl-cell"></div><div class="tl-cell"><div class="tl-dot g"></div></div><div class="tl-cell"><div class="tl-dot g"></div></div><div class="tl-cell"><div class="tl-dot g"></div></div><div class="tl-cell"><div class="tl-dot g"></div></div>
+        <div class="tl-row-lbl">5. เปิดบ้านเด็กหัวการค้า</div>
+        <div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div>
+        <div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"><div class="tl-dot o"></div></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div>
+        <div class="tl-row-lbl">6. แคมป์เด็กหัวการค้า ปีที่ 12</div>
+        <div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div>
+        <div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"><div class="tl-dot o"></div></div><div class="tl-cell"></div><div class="tl-cell"></div>
+        <div class="tl-row-lbl">7. UTCC Cover Dance</div>
+        <div class="tl-cell"></div><div class="tl-cell"><div class="tl-dot o"></div></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div>
+        <div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div><div class="tl-cell"></div>
+      </div>
+    </div>
+    <div style="display:flex;gap:12px;margin-top:8px;font-size:11.5px;color:var(--ink3);flex-wrap:wrap">
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:11px;height:11px;background:#2e86c1;border-radius:2px;display:inline-block"></span>แนะแนว/บูธ</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:11px;height:11px;background:#0e6655;border-radius:2px;display:inline-block"></span>กิจกรรมการตลาด</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:11px;height:11px;background:#c0392b;border-radius:2px;display:inline-block"></span>Event</span>
+    </div>
+    <!-- Mobile timeline -->
+    <div class="tl-mob">
+      <div class="tl-mi"><div class="tl-md" style="background:#2e86c1"></div><div><div class="tl-mn">1. แนะแนวออกบูธ กทม. & ปริมณฑล</div><div class="tl-mm">ส.ค.–พ.ย. 69 / ก.พ.–ก.ค. 70 · 1,132,000 บาท</div></div></div>
+      <div class="tl-mi"><div class="tl-md" style="background:#2e86c1"></div><div><div class="tl-mn">2. แนะแนวออกบูธต่างจังหวัด</div><div class="tl-mm">ส.ค.–ธ.ค. 69 / ก.ค. 70 · 1,036,700 บาท</div></div></div>
+      <div class="tl-mi"><div class="tl-md" style="background:#0e6655"></div><div><div class="tl-mn">3. กิจกรรมพิเศษการตลาด ช่วง 1</div><div class="tl-mm">ส.ค. / ต.ค.–ม.ค. 70 · 11 กิจกรรม · 668,406 บาท</div></div></div>
+      <div class="tl-mi"><div class="tl-md" style="background:#0e6655"></div><div><div class="tl-mn">4. กิจกรรมพิเศษการตลาด ช่วง 2</div><div class="tl-mm">ก.พ.–ก.ค. 70 · 8 กิจกรรม · 673,228 บาท</div></div></div>
+      <div class="tl-mi"><div class="tl-md" style="background:#c0392b"></div><div><div class="tl-mn">5. เปิดบ้านเด็กหัวการค้า</div><div class="tl-mm">มี.ค. 70 · 562,386 บาท</div></div></div>
+      <div class="tl-mi"><div class="tl-md" style="background:#c0392b"></div><div><div class="tl-mn">6. แคมป์เด็กหัวการค้า ปีที่ 12</div><div class="tl-mm">พ.ค. 70 · 348,689 บาท</div></div></div>
+      <div class="tl-mi"><div class="tl-md" style="background:#c0392b"></div><div><div class="tl-mn">7. UTCC Cover Dance</div><div class="tl-mm">ก.ย. 69 · 242,289 บาท</div></div></div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sh">🗓️ Events สำคัญรายเดือน</div>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>เดือน</th><th>กิจกรรม</th><th>กลยุทธ์</th></tr></thead>
+      <tbody>
+        <tr><td><strong>ส.ค. 69</strong></td><td>ตลาดนัดหลักสูตร ม.สงขลา · บูธ กทม./ต่างจว.</td><td><span class="b b-teal">กย.3</span></td></tr>
+        <tr><td><strong>ก.ย. 69</strong></td><td>UTCC Cover Dance · บูธต่อเนื่อง</td><td><span class="b b-blue">กย.1</span></td></tr>
+        <tr><td><strong>ต.ค. 69</strong></td><td>CAMPUS TOURNAMENT · ม.SUT · Dek-D's TCAS (3-4 ต.ค.)</td><td><span class="b b-teal">กย.3</span></td></tr>
+        <tr><td><strong>พ.ย. 69</strong></td><td>ม.นครพนม · CMU · ม.เกษตรศาสตร์ · Content Mktg</td><td><span class="b b-teal">กย.3</span></td></tr>
+        <tr><td><strong>ธ.ค. 69–ม.ค. 70</strong></td><td>Content Mktg ปีใหม่ (25, 31 ธ.ค.) · มูเตลู (14-16 ม.ค.)</td><td><span class="b b-teal">กย.3</span></td></tr>
+        <tr><td><strong>ก.พ.–มี.ค. 70</strong></td><td>Valentine Content · เปิดบ้านเด็กหัวการค้า · บูธ กทม.</td><td><span class="b b-blue">กย.1</span></td></tr>
+        <tr><td><strong>เม.ย.–พ.ค. 70</strong></td><td>Songkran Content · Dek-D's TCAS Fair · แคมป์เด็กหัวการค้า · Pride Month</td><td><span class="b b-teal">กย.3</span></td></tr>
+        <tr><td><strong>มิ.ย.–ก.ค. 70</strong></td><td>Mini Open House · ตลาดนัด ม.อุบลฯ / ม.ขอนแก่น</td><td><span class="b b-amber">กย.4</span></td></tr>
+      </tbody>
+    </table></div>
+    <!-- mobile event cards -->
+    <div class="card-list">
+      <div class="ci"><div class="ci-title">ส.ค. 2569</div><div class="ci-desc">ตลาดนัดหลักสูตร ม.สงขลา · บูธ กทม./ต่างจว.</div><div class="ci-meta"><span class="b b-teal">กย.3</span></div></div>
+      <div class="ci"><div class="ci-title">ก.ย. 2569</div><div class="ci-desc">UTCC Cover Dance · บูธต่อเนื่อง</div><div class="ci-meta"><span class="b b-blue">กย.1</span></div></div>
+      <div class="ci"><div class="ci-title">ต.ค. 2569</div><div class="ci-desc">CAMPUS TOURNAMENT · ม.SUT · Dek-D's TCAS (3-4 ต.ค.)</div><div class="ci-meta"><span class="b b-teal">กย.3</span></div></div>
+      <div class="ci"><div class="ci-title">พ.ย. 2569</div><div class="ci-desc">ม.นครพนม · CMU · ม.เกษตรศาสตร์ · Content Mktg</div><div class="ci-meta"><span class="b b-teal">กย.3</span></div></div>
+      <div class="ci"><div class="ci-title">ธ.ค. 69 – ม.ค. 70</div><div class="ci-desc">Content Mktg ปีใหม่ (25,31 ธ.ค.) · มูเตลู (14-16 ม.ค.)</div><div class="ci-meta"><span class="b b-teal">กย.3</span></div></div>
+      <div class="ci"><div class="ci-title">ก.พ. – มี.ค. 70</div><div class="ci-desc">Valentine Content · เปิดบ้านเด็กหัวการค้า · บูธ กทม.</div><div class="ci-meta"><span class="b b-blue">กย.1</span></div></div>
+      <div class="ci"><div class="ci-title">เม.ย. – พ.ค. 70</div><div class="ci-desc">Songkran · Dek-D's TCAS Fair · แคมป์เด็กหัวการค้า · Pride Month</div><div class="ci-meta"><span class="b b-teal">กย.3</span><span class="b b-blue">กย.1</span></div></div>
+      <div class="ci"><div class="ci-title">มิ.ย. – ก.ค. 70</div><div class="ci-desc">Mini Open House · ตลาดนัด ม.อุบลฯ / ม.ขอนแก่น</div><div class="ci-meta"><span class="b b-gold">กย.2</span><span class="b b-amber">กย.4</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CALC ═══ -->
+<div id="page-calc" class="page wrap">
+  <div class="sec">
+    <div class="sh">🧮 คำนวณงบประมาณ</div>
+    <p style="font-size:12.5px;color:var(--ink3);margin-bottom:14px">แก้ไขตัวเลขได้เลย · ช่องสีส้มคือรายการที่แนะนำให้เพิ่ม</p>
+    <div class="grand-box">
+      <div class="grand-num" id="grand">7,963,698</div>
+      <div class="grand-lbl">บาท · งบประมาณรวมทั้งสิ้น ปีการศึกษา 2569</div>
+      <div id="diff-tag" class="diff-tag" style="color:#86efac;border-color:#86efac">ตรงตามแผนปัจจุบัน</div>
+    </div>
+    <div class="calc-card">
+      <div class="calc-hd">📁 โครงการในแผน</div>
+      <div class="calc-row"><span class="calc-lbl">1. สื่อมวลชนสัมพันธ์<span class="calc-dept">ปชส.</span></span><input class="calc-inp" id="c1" value="600000" oninput="calc()"></div>
+      <div class="calc-row"><span class="calc-lbl">2. เอกสาร/ของที่ระลึก<span class="calc-dept">ปชส.</span></span><input class="calc-inp" id="c2" value="1720000" oninput="calc()"></div>
+      <div class="calc-row"><span class="calc-lbl">3. คอนเทนต์ภาพลักษณ์<span class="calc-dept">ปชส., กกต.</span></span><input class="calc-inp" id="c3" value="150000" oninput="calc()"></div>
+      <div class="calc-row"><span class="calc-lbl">4. คอนเทนต์คณะวิชา<span class="calc-dept">ปชส., กกต.</span></span><input class="calc-inp" id="c4" value="800000" oninput="calc()"></div>
+      <div class="calc-row"><span class="calc-lbl">5. กิจกรรมพิเศษ ช่วง 1<span class="calc-dept">กกต.</span></span><input class="calc-inp" id="c5" value="668406" oninput="calc()"></div>
+      <div class="calc-row"><span class="calc-lbl">6. กิจกรรมพิเศษ ช่วง 2<span class="calc-dept">กกต.</span></span><input class="calc-inp" id="c6" value="673228" oninput="calc()"></div>
+      <div class="calc-row"><span class="calc-lbl">7. เปิดบ้านเด็กหัวการค้า<span class="calc-dept">กกต.</span></span><input class="calc-inp" id="c7" value="562386" oninput="calc()"></div>
+      <div class="calc-row"><span class="calc-lbl">8. แคมป์เด็กหัวการค้า<span class="calc-dept">กกต.</span></span><input class="calc-inp" id="c8" value="348689" oninput="calc()"></div>
+      <div class="calc-row"><span class="calc-lbl">9. UTCC Cover Dance<span class="calc-dept">กกต.</span></span><input class="calc-inp" id="c9" value="242289" oninput="calc()"></div>
+      <div class="calc-row"><span class="calc-lbl">10. แนะแนวต่างจังหวัด<span class="calc-dept">กสร.</span></span><input class="calc-inp" id="c10" value="1036700" oninput="calc()"></div>
+      <div class="calc-row"><span class="calc-lbl">11. แนะแนว กทม. & ปริมณฑล<span class="calc-dept">กสร.</span></span><input class="calc-inp" id="c11" value="1132000" oninput="calc()"></div>
+      <div class="calc-row"><span class="calc-lbl">12. ผลิตสื่อหอการค้าจังหวัด<span class="calc-dept">ปชส.</span></span><input class="calc-inp" id="c12" value="30000" oninput="calc()"></div>
+      <div class="calc-foot"><span class="lbl">รวมโครงการปัจจุบัน</span><span class="val" id="sub1">7,963,698</span></div>
+    </div>
+    <div class="calc-card" style="border:2px solid var(--amber)">
+      <div class="calc-hd" style="background:#7a4a00">➕ รายการที่แนะนำให้เพิ่ม</div>
+      <div class="calc-row"><span class="calc-lbl" style="color:var(--amber)">อบรม AI & Digital Tools<span class="calc-dept">กย.7</span></span><input class="calc-inp new" id="n1" value="0" oninput="calc()"></div>
+      <div class="calc-row"><span class="calc-lbl" style="color:var(--amber)">Paid Digital Advertising<span class="calc-dept">กย.3</span></span><input class="calc-inp new" id="n2" value="0" oninput="calc()"></div>
+      <div class="calc-row"><span class="calc-lbl" style="color:var(--amber)">Software Subscription<span class="calc-dept">กย.3,7</span></span><input class="calc-inp new" id="n3" value="0" oninput="calc()"></div>
+      <div class="calc-row"><span class="calc-lbl" style="color:var(--amber)">อาจารย์แนะแนว / MOU<span class="calc-dept">กย.6</span></span><input class="calc-inp new" id="n4" value="0" oninput="calc()"></div>
+      <div class="calc-row"><span class="calc-lbl" style="color:var(--amber)">Campaign Reskill/Upskill<span class="calc-dept">กย.5</span></span><input class="calc-inp new" id="n5" value="0" oninput="calc()"></div>
+      <div class="calc-row"><span class="calc-lbl" style="color:var(--amber)">Influencer / KOL Marketing<span class="calc-dept">กย.3</span></span><input class="calc-inp new" id="n6" value="0" oninput="calc()"></div>
+      <div class="calc-foot" style="background:#7a4a00"><span class="lbl">รวมรายการที่แนะนำ</span><span class="val" id="sub2">0</span></div>
+    </div>
+    <div class="box"><h3>💡 Scenario แนะนำ — ลองพิมพ์:</h3><ul>
+      <li><span class="ico">📝</span>อบรมบุคลากร: <strong>100,000</strong></li>
+      <li><span class="ico">📱</span>Paid Digital Ads: <strong>300,000</strong></li>
+      <li><span class="ico">💻</span>Software Subscription: <strong>80,000</strong></li>
+      <li><span class="ico">🤝</span>MOU/อาจารย์แนะแนว: <strong>150,000</strong></li>
+    </ul></div>
+    <div class="box" style="padding:14px"><h3>📊 สัดส่วนงบตามหน่วยงาน</h3><div class="chart" id="deptCalcChart" style="margin-top:8px"></div></div>
+  </div>
+</div>
+
+<footer>วิเคราะห์จากแผนกลยุทธ์ฝ่ายสื่อสารการตลาด ปีการศึกษา 2569 · มหาวิทยาลัยหอการค้าไทย</footer>
+
+<script>
+const BASE=7963698;
+const PJS=[
+  {name:'สื่อมวลชนสัมพันธ์',val:600000,color:'#1b4f72'},
+  {name:'เอกสาร/ของที่ระลึก',val:1720000,color:'#1b4f72'},
+  {name:'คอนเทนต์ภาพลักษณ์',val:150000,color:'#2e86c1'},
+  {name:'คอนเทนต์คณะวิชา',val:800000,color:'#2e86c1'},
+  {name:'กิจกรรมพิเศษ ช่วง 1',val:668406,color:'#0e6655'},
+  {name:'กิจกรรมพิเศษ ช่วง 2',val:673228,color:'#0e6655'},
+  {name:'เปิดบ้านเด็กหัวการค้า',val:562386,color:'#0e6655'},
+  {name:'แคมป์เด็กหัวการค้า',val:348689,color:'#0e6655'},
+  {name:'UTCC Cover Dance',val:242289,color:'#0e6655'},
+  {name:'แนะแนวต่างจังหวัด',val:1036700,color:'#b7860b'},
+  {name:'แนะแนว กทม./ปริมณฑล',val:1132000,color:'#b7860b'},
+  {name:'ผลิตสื่อหอการค้าจว.',val:30000,color:'#1b4f72'},
+];
+const DEPT=[
+  {name:'ปชส. (กองประชาสัมพันธ์)',val:600000+1720000+150000+30000,color:'#1b4f72'},
+  {name:'กสร. (กองส่งเสริมรับนักศึกษา)',val:1036700+1132000,color:'#b7860b'},
+  {name:'กกต. (กองการตลาด)',val:668406+673228+562386+348689+242289,color:'#0e6655'},
+  {name:'ปชส.+กกต. (ร่วม)',val:150000+800000,color:'#2e86c1'},
+];
+function fmt(n){return Math.round(n).toLocaleString('th-TH');}
+function buildChart(id,data,tot){
+  const el=document.getElementById(id);if(!el)return;
+  el.innerHTML=data.map(d=>`<div class="cr"><div class="cr-lbl"><span>${d.name}</span><span>${fmt(d.val)} (${(d.val/tot*100).toFixed(1)}%)</span></div><div class="cr-track"><div class="cr-fill" style="width:${d.val/tot*100}%;background:${d.color}">${d.val/tot*100>9?(d.val/tot*100).toFixed(0)+'%':''}</div></div></div>`).join('');
+}
+function drawAll(){
+  const t=PJS.reduce((s,p)=>s+p.val,0);
+  buildChart('mainChart',PJS,t);
+  const dt=DEPT.reduce((s,d)=>s+d.val,0);
+  buildChart('deptChart',DEPT,dt);
+  buildChart('deptCalcChart',DEPT,dt);
+}
+const PAGES=['overview','swot','projects','strategy','gap','timeline','calc'];
+function show(id,btn,nav){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
+  document.getElementById('page-'+id).classList.add('on');
+  document.querySelectorAll('.tnb').forEach(b=>b.classList.remove('on'));
+  document.querySelectorAll('.bnb').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  const i=PAGES.indexOf(id);
+  if(nav==='bot'){const bs=document.querySelectorAll('.tnb');if(bs[i])bs[i].classList.add('on');}
+  if(nav==='top'){const bs=document.querySelectorAll('.bnb');if(bs[i])bs[i].classList.add('on');}
+  if(id==='overview'||id==='calc')setTimeout(drawAll,50);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function calc(){
+  const a=['c1','c2','c3','c4','c5','c6','c7','c8','c9','c10','c11','c12'];
+  const b=['n1','n2','n3','n4','n5','n6'];
+  const s1=a.reduce((s,id)=>s+(parseFloat(document.getElementById(id).value)||0),0);
+  const s2=b.reduce((s,id)=>s+(parseFloat(document.getElementById(id).value)||0),0);
+  const g=s1+s2;
+  document.getElementById('sub1').textContent=fmt(s1);
+  document.getElementById('sub2').textContent=fmt(s2);
+  document.getElementById('grand').textContent=fmt(g);
+  ['kpi-total','proj-total'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=fmt(g);});
+  const el=document.getElementById('proj-total-m');if(el)el.textContent=fmt(g)+' บาท';
+  const diff=g-BASE,tag=document.getElementById('diff-tag');
+  if(Math.abs(diff)<1){tag.textContent='ตรงตามแผนปัจจุบัน';tag.style.cssText='color:#86efac;border-color:#86efac';}
+  else if(diff>0){tag.textContent='▲ เพิ่ม '+fmt(diff)+' บาท';tag.style.cssText='color:#fde68a;border-color:#fde68a';}
+  else{tag.textContent='▼ ลด '+fmt(Math.abs(diff))+' บาท';tag.style.cssText='color:#fca5a5;border-color:#fca5a5';}
+}
+drawAll();
+</script>
+</body>
+</html>
